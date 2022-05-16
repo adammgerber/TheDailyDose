@@ -1,6 +1,5 @@
 import urllib.request
 from bs4 import BeautifulSoup
-from deep_translator import GoogleTranslator
 import re
 import spacy
 import pandas as pd
@@ -40,10 +39,10 @@ for para in htmlParse.find_all("p"):
 
 
 #remove all empty lists within the list
-total_verbs = [x for x in total_words if x]
+total_words = [x for x in total_words if x]
 
 #convert list to dataframe
-df = pd.DataFrame(total_verbs, columns=['Russian'])
+df = pd.DataFrame(total_words, columns=['Russian'])
 
 #add an 'English' column to the dataframe with translations of original Russian words
 df['English'] = df['Russian'].apply(GoogleTranslator(source='auto', target='en').translate)
