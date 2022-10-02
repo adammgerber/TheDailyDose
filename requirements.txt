@@ -1,0 +1,6 @@
+beautifulsoup4==4.11.1
+deep_translator==1.9.0
+genanki==0.13.0
+pandas==1.5.0
+pandas_stubs==1.2.0.58
+spacy==3.2.3
